@@ -15,10 +15,10 @@ var server = http.createServer(app);
 
 var port = process.env.PORT || '3000';
 
-app.set('port', post);
+app.set('port', port);
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public')))；
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/peerjs', ExpressPeerServer(server, options));
 app.use(errorhandler());
 
